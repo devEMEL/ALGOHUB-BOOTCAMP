@@ -1,0 +1,8 @@
+
+export ONE=ENV3PZOJSIVCJK4ZAJPZYRW7C62BAAISC7PDPZ74TWUAJBUIVCDC5BEDUM
+ goal asset create --creator $ONE --name "Algohub Tutorial 1 Lab Coin" --total 1000000000 --unitname AHT --decimals 6
+
+ export AHT=2
+
+ goal asset send --assetid $AHT -f $ONE -t $ONE --amount 0
+ al account info -a $TWO
