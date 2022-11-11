@@ -1,14 +1,16 @@
 
 export ONE=ENV3PZOJSIVCJK4ZAJPZYRW7C62BAAISC7PDPZ74TWUAJBUIVCDC5BEDUM
- goal asset create --creator $ONE --name "Algohub Tutorial 1 Lab Coin" --total 1000000000 --unitname AHT --decimals 6
+goal asset create --creator $ONE --name "Algohub Tutorial 1 Lab Coin" --total 1000000000 --unitname AHT --decimals 6
 
 export AHT=2
 
 goal asset send --assetid $AHT -f $ONE -t $ONE --amount 0
 goal account info -a $TWO
 
-goal app create --creator $ONE ................
-export $APP=4
+goal app create --creator $ONE --approval-prog /data/Lab1/approval.teal --clear-prog /data/Lab1/clear.teal --global-byteslices 0 --global-ints 1 --local-byteslices 0 --local-ints 0
+
+
+export APP=4
 goal app info --app-id $APP
 
 goal app read --global --guess-format --app-id $APP
@@ -20,3 +22,4 @@ tealdbg debug -d dryrun.msog --listen 0.0.0.0
 Then open your browser 
 chrome://inspect/#devices
 Go to debugger or console
+
