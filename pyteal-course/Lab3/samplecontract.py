@@ -8,7 +8,8 @@ from pyteal import *
 def approval_program():
     handle_creation = Seq([
         App.globalPut(Bytes("Count"), Int(0)),
-        Return(Int(1))
+        Return(Int(1)) #  Approve()
+    
     ])
 
     # 2. Change handle_optin to return 1
